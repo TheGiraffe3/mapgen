@@ -283,6 +283,14 @@ public class StarSystem implements EventModifiableObject {
 		return namedObjects;
 	}
 
+	public int getPlanetAttributeCount(String attribute, GalacticMap map) {
+		int attributeCount = 0;
+		for (StellarObject object : objects) {
+			attributeCount += object.countAttribute(attribute, map);
+		}
+		return attributeCount;
+	}
+
 	// Accessors
 	public String getName() {
 		return name;

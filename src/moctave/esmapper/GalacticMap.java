@@ -362,6 +362,17 @@ public class GalacticMap extends DrawnItem {
 			));
 		}
 
+		if (paintMode[0].equals("planet attribute")) {
+			if (system.getPlanetAttributeCount(paintMode[1], this) == 0)
+				return getGovernment("Uninhabited").getColor();
+
+			return getGeneralColor(getScore(
+				system.getPlanetAttributeCount(paintMode[1], this),
+				1,
+				3
+			));
+		}
+
 		// Default is government paint
 		return getGovernment(system.getGovernment()).getColor();
 	}

@@ -60,6 +60,13 @@ legend "minable count"
 	item "8 asteroids" .12 .48 .48
 	item "15 asteroids" .6 .48 0
 
+legend "planet attribute"
+	align right
+	item "not planet with attribute" "governments: Ungoverned"
+	item "1 planet" 0 .12 .6
+	item "2 planets" .12 .48 .48
+	item "3 planets" .6 .48 0
+
 legend "food price"
 	align right
 	header "Price of Food"

@@ -69,6 +69,18 @@ public class StellarObject {
 		return false;
 	}
 
+	public int countAttribute(String attribute, GalacticMap map) {
+		int attributeCount = 0;
+		for (StellarObject child : children) {
+			attributeCount += child.countAttribute(attribute, map);
+		}
+		if (name != null) {
+			if (map.getPlanet(name).getAttributes().contains(attribute))
+				attributeCount++;
+		}
+		return attributeCount;
+	}
+
 	// Getters
 	public String getName() {
 		return name;

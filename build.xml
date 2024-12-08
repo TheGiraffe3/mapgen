@@ -6,7 +6,7 @@
 	</path>
 	<target name="compile">
 		<mkdir dir="bin"/>
-		<javac srcdir="src" destdir="bin"/>
+		<javac srcdir="src" destdir="bin" release="21" includeantruntime="false"/>
 		<copy todir="bin">
 			<fileset dir="assets"/>
 		</copy>
