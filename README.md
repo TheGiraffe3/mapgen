@@ -281,7 +281,7 @@ I'm so glad you asked! I've included curly braces in the documentation here beca
 
 #### {Color}
 
-There three different ways colors are defined in ES, and any of the three can be used with this generator. Thus, when you see `color {color}`, it is an abbreviation for:
+There are three different ways colors are defined in ES, and any of the three can be used with this generator. Thus, when you see `color {color}`, it is an abbreviation for:
 
 ```html
 color <r> <g> <b>
