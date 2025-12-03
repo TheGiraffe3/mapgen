@@ -8,7 +8,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v6
     - name: Set up JDK
       uses: actions/setup-java@v4
       with:
@@ -19,34 +19,36 @@ jobs:
     - name: Make endless-sky directory
       run: mkdir endless-sky
     - name: Download ES files
-      uses: actions/checkout@v4
+      uses: actions/checkout@v6
       with:
         repository: 'endless-sky/endless-sky'
         path: endless-sky
     - name: Run Program
       run: java -jar "ES Mapper.jar" "default config.txt"
-    - name: Remove unneeded files
-      run: |
-        rm .gitignore
-        rm -r .github/
-        rm "ES Mapper.jar"
-        rm LICENSE
-        rm README.md
-        rm -r assets
-        rm build.xml
-        rm "default config.txt"
-        rm -r endless-sky
-        rm -r src
-    - name: Commit map files
-      run: |
-        git config --local user.email "github-actions[bot]@users.noreply.github.com"
-        git config --local user.name "github-actions[bot]"
-        git add .
-        git add bin
-        git commit -m "Map Creation"
-    - name: Push map files
-      uses: ad-m/github-push-action@v1.0.0
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: maps
-        force: true
+    - name: list files
+      run: ls
+    # - name: Remove unneeded files
+    #   run: |
+    #     rm .gitignore
+    #     rm -r .github/
+    #     rm "ES Mapper.jar"
+    #     rm LICENSE
+    #     rm README.md
+    #     rm -r assets
+    #     rm build.xml
+    #     rm "default config.txt"
+    #     rm -r endless-sky
+    #     rm -r src
+    # - name: Commit map files
+    #   run: |
+    #     git config --local user.email "github-actions[bot]@users.noreply.github.com"
+    #     git config --local user.name "github-actions[bot]"
+    #     git add .
+    #     git add bin
+    #     git commit -m "Map Creation"
+    # - name: Push map files
+    #   uses: ad-m/github-push-action@v1.0.0
+    #   with:
+    #     github_token: ${{ secrets.GITHUB_TOKEN }}
+    #     branch: maps
+    #     force: true
