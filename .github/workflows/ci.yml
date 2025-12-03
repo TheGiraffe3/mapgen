@@ -9,8 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - name: List folder contents
-      run: ls
     - name: Set up JDK
       uses: actions/setup-java@v4
       with:
@@ -18,11 +16,13 @@ jobs:
         distribution: 'oracle'
     - name: Build with Ant
       run: ant jar
+    - name: List folder contents
+      run: ls
+    - name: List mapgen folder contents
+      run: ls mapgen
     - name: Download ES files
       uses: actions/checkout@v4
       with:
         repository: 'endless-sky/endless-sky'
     - name: Run Program
       run: java -jar "ES Mapper.jar" "default config.txt"
-    - name: List folder contents
-      run: ls
