@@ -113,7 +113,7 @@ public class Legend extends DrawnItem {
 					texts.get(i),
 					offset + 22,
 					i * 20 + 44,
-					Main.getColor("message log importance high")
+					Main.getColor("message log category high")
 				);
 			} else {
 				drawString(

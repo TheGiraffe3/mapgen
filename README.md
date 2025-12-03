@@ -62,7 +62,7 @@ These two lines are the simplest and easiest way to drastically change the conte
 
 The `game directory` is the basic underlying layer. Even if you choose to only draw plugin content on a map, you **still need** to define a `game directory`. This doesn't necessarily need to be a vanilla copy of ES, or even a working copy at all, but it should still contain the following:
 - Any image assets you want to use (such as the Milky Way galaxy background), in `images`
-- Color definitions for the colors `map name`, `map link`, `map wormhole`, and `message log importance high`
+- Color definitions for the colors `map name`, `map link`, `map wormhole`, and `message log category high`
 - A definition for the government `Uninhabited`
 
 On top of the `game directory`, you can define as many `plugin directory`s as you want. Image paths will be resolved in reverse order, so the last plugin you define will be the first place the generator looks for images (and the `game directory` will be the last). I can't guarantee that conflicts between data will be resolved nearly as well, so map conflicting plugins at your own risk.

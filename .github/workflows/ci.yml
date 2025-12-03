@@ -25,5 +25,7 @@ jobs:
         path: endless-sky
     - name: Run Program
       run: java -jar "ES Mapper.jar" "default config.txt"
+    - name: Remove unneeded files
+      run: rm "ES Mapper.jar"; rm LICENSE; rm README.md; rm -r assets; rm build.xml; rm "default config.txt"; rm -r endless-sky; rm -r src
     - name: List folder contents
       run: ls
