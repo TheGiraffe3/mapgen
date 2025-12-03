@@ -27,27 +27,29 @@ jobs:
       run: java -jar "ES Mapper.jar" "default config.txt"
     - name: list files
       run: ls
-    - name: Remove unneeded files
-      run: |
-        rm -r endless-sky
-    - name: Commit map files
-      run: |
-        git config --local user.email "github-actions[bot]@users.noreply.github.com"
-        git config --local user.name "github-actions[bot]"
-        git add .
-        git commit -m "Map Creation"
-    - name: Push map files
-      uses: ad-m/github-push-action@v1.0.0
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: maps
-        force: true
-        # rm .gitignore
-        # rm -r .github/
-        # rm "ES Mapper.jar"
-        # rm LICENSE
-        # rm README.md
-        # rm -r assets
-        # rm build.xml
-        # rm "default config.txt"
-        # rm -r src
+    - name: list files
+      run: ls ..
+    # - name: Remove unneeded files
+    #   run: |
+    #     rm -r endless-sky
+    # - name: Commit map files
+    #   run: |
+    #     git config --local user.email "github-actions[bot]@users.noreply.github.com"
+    #     git config --local user.name "github-actions[bot]"
+    #     git add .
+    #     git commit -m "Map Creation"
+    # - name: Push map files
+    #   uses: ad-m/github-push-action@v1.0.0
+    #   with:
+    #     github_token: ${{ secrets.GITHUB_TOKEN }}
+    #     branch: maps
+    #     force: true
+    #     # rm .gitignore
+    #     # rm -r .github/
+    #     # rm "ES Mapper.jar"
+    #     # rm LICENSE
+    #     # rm README.md
+    #     # rm -r assets
+    #     # rm build.xml
+    #     # rm "default config.txt"
+    #     # rm -r src
