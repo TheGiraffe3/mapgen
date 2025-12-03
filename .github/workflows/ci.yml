@@ -23,7 +23,7 @@ jobs:
       with:
         repository: 'endless-sky/endless-sky'
         path: endless-sky
-    - name: List folder contents
-      run: ls
     - name: Run Program
       run: java -jar "ES Mapper.jar" "default config.txt"
+    - name: List folder contents
+      run: ls
