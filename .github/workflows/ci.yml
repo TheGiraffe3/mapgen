@@ -39,16 +39,16 @@ jobs:
     #     rm "default config.txt"
     #     rm -r endless-sky
     #     rm -r src
-    # - name: Commit map files
-    #   run: |
-    #     git config --local user.email "github-actions[bot]@users.noreply.github.com"
-    #     git config --local user.name "github-actions[bot]"
-    #     git add .
-    #     git add bin
-    #     git commit -m "Map Creation"
-    # - name: Push map files
-    #   uses: ad-m/github-push-action@v1.0.0
-    #   with:
-    #     github_token: ${{ secrets.GITHUB_TOKEN }}
-    #     branch: maps
-    #     force: true
+    - name: Commit map files
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git add .
+        git add bin
+        git commit -m "Map Creation"
+    - name: Push map files
+      uses: ad-m/github-push-action@v1.0.0
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: maps
+        force: true
