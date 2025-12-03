@@ -1,14 +1,14 @@
-# MacOS annoying stuff
-.DS_Store
+# # MacOS annoying stuff
+# .DS_Store
 
-# Ignore Java build files
-bin
-*.jar
+# # Ignore Java build files
+# bin
+# *.jar
 
-# Ignore the local and output folders. Intended for testing, so I don't dox
-# myself, reveal Easter eggs, or bloat the repo with unwanted files.
-local
-output
+# # Ignore the local and output folders. Intended for testing, so I don't dox
+# # myself, reveal Easter eggs, or bloat the repo with unwanted files.
+# local
+# output
 
-# Docs are janky right now, so we'll ignore them until I fix my code.
-docs
+# # Docs are janky right now, so we'll ignore them until I fix my code.
+# docs
