@@ -26,7 +26,7 @@ jobs:
     - name: Run Program
       run: java -jar "ES Mapper.jar" "default config.txt"
     - name: list files
-      run: ls
+      run: ls -R
     - name: list files
       run: ls ..
     # - name: Remove unneeded files
