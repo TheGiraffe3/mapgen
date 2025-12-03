@@ -25,13 +25,13 @@ jobs:
         path: endless-sky
     - name: Run Program
       run: java -jar "ES Mapper.jar" "default config.txt"
+    - name: Remove unneeded files
+      run: |
+        rm -r endless-sky
     - name: list files
       run: ls -R
     - name: list files
       run: ls ..
-    # - name: Remove unneeded files
-    #   run: |
-    #     rm -r endless-sky
     # - name: Commit map files
     #   run: |
     #     git config --local user.email "github-actions[bot]@users.noreply.github.com"
