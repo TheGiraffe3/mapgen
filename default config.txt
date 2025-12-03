@@ -11,6 +11,8 @@
 # You should have received a copy of the GNU Affero General Public License along with
 # this program. If not, see <https://www.gnu.org/licenses/>.
 
+"game directory" "endless-sky"
+
 legend "governments"
 	align right
 	header "Human Space"
@@ -23,11 +25,14 @@ legend "governments"
 	header "Ember Waste"
 	item "Builder" .91 .13 .82
 	item "Remnant" "governments: Remnant"
-	header "Successor Space"
+	header "The Tangled Shroud"
 	item "Successor" 0 .8 0.653
 	item "Old Houses" "governments: Old Houses"
 	item "New Houses" "governments: New Houses"
 	item "People's Houses" 0.92 0.29 0.20
+	item "Avgi" "governments: Avgi"
+	item "Avgi (Consonance)" "governments: Avgi"
+	item "Avgi (Dissonance)" "governments: Avgi"
 	header "Coalition Space"
 	item "Heliarch" 1 .8 .5
 	item "Coalition" 1 .6 .7
