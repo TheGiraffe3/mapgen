@@ -16,12 +16,13 @@ jobs:
         distribution: 'oracle'
     - name: Build with Ant
       run: ant jar
-    - name: List folder contents
-      run: ls
+    - name: Make endless-sky directory
+      run: mkdir endless-sky
     - name: Download ES files
       uses: actions/checkout@v4
       with:
         repository: 'endless-sky/endless-sky'
+        path: endless-sky
     - name: List folder contents
       run: ls
     - name: Run Program
